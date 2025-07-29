@@ -28,6 +28,7 @@ div#logo span {
     font-family: Inter, Arial, sans-serif;
     font-weight: 400;
     font-size: 150px;
+    
 }
 
 div.center {
@@ -35,14 +36,21 @@ div.center {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-content: space-between;
+}
+
+@keyframes horizontal-bar-slide {
+  from {width: 100%;}
+  to {width: 0%;}
 }
 
 div.horizontal-bar {
     width: 100%;
     height: 20px;
     background-color: var(--color-dark-gray);
+    animation-name: horizontal-bar-slide;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
 }
 
 .left {
